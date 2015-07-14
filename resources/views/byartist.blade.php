@@ -17,6 +17,12 @@
                 </div>
             @endforeach
         </div>
+
+        {!! Form::open(array('url' => 'foo/bar'))  !!}
+        {!! Form::select('selected_artists[]', $select_artists, null, ['id' => 'selected_artists', 'class' => 'form-control', 'multiple', 'style' => 'display: none;']) !!}
+        {!! Form::close() !!}
+
+        <a onclick="populateSelect();">Go</a>
     </div>
 </div>
 
@@ -32,6 +38,16 @@
         var numberSelected = $(".artist-name-selected").length;
         $(".noOfArtistsSelected").html(numberSelected);
     }
+
+    function populateSelect() {
+        var selectedArtists = $(".artist-name-selected > h3");
+        var selectedArtistNames = [];
+        selectedArtists.each(function() {
+            selectedArtistNames.push($(this).html());
+        });
+        $("#selected_artists").val(selectedArtistNames);
+    }
+
 </script>
 
 @include('partials.footer')

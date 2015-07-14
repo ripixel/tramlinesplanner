@@ -2,7 +2,7 @@
 
 <div class="hero">
     <div class="container hero-center">
-        <h1 class="title hide-mobile"><img src="public/img/tramlines-text.png" /><br/><span style="color: #ed1c24; font-size: 1.4em;">Tramlines Festival Schedule Planner</span></h1>
+        <h1 class="title hide-mobile"><img src="/tramlinesplanner/public/img/tramlines-text.png" /><br/><span style="color: #ed1c24; font-size: 1.4em;">Tramlines Festival Schedule Planner</span></h1>
         <p class="restrict-width">An easy to use planner for Tramlines. Tell us who you want to see, and we'll figure out where you need to be, and if there's any clashes. Alternatively, see the whole schedule and pick what you want to see!</p>
         <p class="restrict-width">See your schedule, share it with friends, and even enter your friends' email address to see which gigs you're both going to!</p>
 

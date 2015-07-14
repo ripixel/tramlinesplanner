@@ -10,6 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/ByArtist', 'ByArtistController@show');
-Route::get('/ByTime', 'ByTimeController@show');
+Route::get('/plan/artist', 'ByArtistController@show');
+Route::get('/plan/time', 'ByTimeController@show');
 Route::get('/', 'HomeController@show');
