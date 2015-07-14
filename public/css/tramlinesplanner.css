@@ -1,0 +1,147 @@
+div, p, a, input, button, h1, h2, h3, h4, h5, h6 {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Arvo', serif;
+	text-transform: uppercase;
+}
+
+a, p {
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
+
+body {
+	background: url('../img/background.webp') no-repeat fixed center center;
+	color: #fff;
+	font-family: 'Arvo', serif;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.restrict-width {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	background: rgba(0,0,0,0.3);
+	padding: 20px 0;
+}
+
+.header h1 {
+	color: #fff;
+}
+
+.header h1, .header h2 {
+	margin: 0;
+}
+
+.header-item {
+	display: inline-block;
+	margin-right: 20px !important;
+	color: #bbb;
+}
+
+.header-item-active {
+	color: #fff;
+}
+
+.header-item:hover {
+	color: #ed1c24;
+}
+
+.hero {
+	width: 100%;
+	text-align: center;
+}
+
+.title {
+	width: 100%;
+	color: #fff;
+}
+
+.title > img {
+	max-width: 100%;
+}
+
+.title > span {
+	display: none;
+}
+
+.hero-center {
+	padding-top: 5vh;
+}
+
+.select-box-grid {
+	margin-top: 5vh;
+}
+
+.select-box {
+	margin: 10px;
+	padding: 20px;
+	border-radius: 10px;
+	background: #ed1c24;
+	background-size: cover;
+	min-height: 30vh;
+	color: #000;
+}
+
+.tram-red {
+	color: #ed1c24;
+}
+
+.select-box p {
+	color: #000;
+}
+
+.select-box-a .select-box:hover {
+	background: #7100fd;
+}
+
+.select-box-a:hover .select-box p, .select-box-a:hover .select-box h2 {
+	color: #fff;
+}
+
+.artist-box {
+	padding: 20px;
+}
+
+.artist-name {
+	background: #ed1c24;
+	display: block;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.artist-name-selected {
+	background: #47B334;
+}
+
+.artist-box h3 {
+	margin: 0;
+}
+
+@media (max-width: 48em) {
+	.container {
+		padding: 0 10px;
+	}
+	
+	.header {
+		text-align: center;
+	}
+	
+	.header-item {
+		display: block;
+	}
+	
+	.hide-mobile {
+		display: none;
+	}
+}
