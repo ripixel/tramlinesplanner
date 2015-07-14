@@ -8,41 +8,14 @@
 
         <h3>Current Number of Artists Selected: <span class="noOfArtistsSelected tram-red">0</span></h3>
         <div class="pure-g artist-box-grid">
-            <div class="pure-u-1-2 pure-u-md-1-4 artist-box">
-                <div class="artist-name">
-                    <h3>A Guy Called Gerald</h3>
-                </div>
-            </div>
 
-            <div class="pure-u-1-2 pure-u-md-1-4 artist-box">
-                <div class="artist-name">
-                    <h3>A Kid / 20 Hz Soundsystem</h3>
+            @foreach($artists as $artist)
+                <div class="pure-u-1-2 pure-u-md-1-4 artist-box">
+                    <div class="artist-name">
+                       <h3>{{ $artist->name }}</h3>
+                    </div>
                 </div>
-            </div>
-
-            <div class="pure-u-1-2 pure-u-md-1-4 artist-box">
-                <div class="artist-name">
-                    <h3>Alcest</h3>
-                </div>
-            </div>
-
-            <div class="pure-u-1-2 pure-u-md-1-4 artist-box">
-                <div class="artist-name">
-                    <h3>Anathema</h3>
-                </div>
-            </div>
-
-            <div class="pure-u-1-2 pure-u-md-1-4 artist-box">
-                <div class="artist-name">
-                    <h3>And So I watch You From Afar</h3>
-                </div>
-            </div>
-
-            <div class="pure-u-1-2 pure-u-md-1-4 artist-box">
-                <div class="artist-name">
-                    <h3>Andy H</h3>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

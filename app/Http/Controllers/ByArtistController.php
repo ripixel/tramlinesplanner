@@ -6,10 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Artist;
 
 class ByArtistController extends Controller
 {
     function show() {
-        return view('byartist');
+
+        $artists = Artist::all();
+
+        return view('byartist', compact('artists'));
     }
 }
