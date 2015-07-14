@@ -7,7 +7,7 @@
         <p class="restrict-width">See your schedule, share it with friends, and even enter your friends' email address to see which gigs you're both going to!</p>
 
         <div class="pure-g select-box-grid">
-            <a href="by-artist.html" class="pure-u-md-1-3 pure-u-1 select-box-a">
+            <a href="{{ action('ByArtistController@show') }}" class="pure-u-md-1-3 pure-u-1 select-box-a">
                 <div class="pure-u-1">
                     <div class="select-box">
                         <h2>By Artist</h2>
@@ -16,7 +16,7 @@
                 </div>
             </a>
 
-            <a href="by-time.html" class="pure-u-md-1-3 pure-u-1 select-box-a">
+            <a href="{{ action('ByTimeController@show') }}" class="pure-u-md-1-3 pure-u-1 select-box-a">
                 <div class="pure-u-1">
                     <div class="select-box">
                         <h2>By Time</h2>
