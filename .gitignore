@@ -44,3 +44,6 @@ Temporary Items
 
 .env
 .env.example
+
+#Ignore PhpStorm stuff
+.idea
