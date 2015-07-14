@@ -9,5 +9,7 @@ use App\Http\Controllers\Controller;
 
 class ByTimeController extends Controller
 {
-    //
+    function show() {
+        return 'yo';
+    }
 }

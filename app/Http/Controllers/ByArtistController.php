@@ -9,5 +9,7 @@ use App\Http\Controllers\Controller;
 
 class ByArtistController extends Controller
 {
-    //
+    function show() {
+        return 'sup';
+    }
 }
