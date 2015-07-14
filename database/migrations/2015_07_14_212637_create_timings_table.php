@@ -18,6 +18,13 @@ class CreateTimingsTable extends Migration
             $table->string('venue_name');
             $table->string('start_time');
             $table->string('end_time');
+
+            $table->foreign('artist_name')
+                    ->references('name')
+                    ->on('artists');
+            $table->foreign('venue_name')
+                    ->references('name')
+                    ->on('venues');
         });
     }
 

@@ -12,7 +12,7 @@ class ByArtistController extends Controller
 {
     function show() {
 
-        $artists = Artist::all();
+        $artists = Artist::orderBy('name','asc')->get();
 
         return view('byartist', compact('artists'));
     }
