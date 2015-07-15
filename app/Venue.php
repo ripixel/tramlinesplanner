@@ -3,10 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Timing;
 
 class Venue extends Model
 {
     public function timings() {
-        return $this->belongsToMany('App\Timing');
+        return Timing::where('venue_name', '=', $this->name)->get();
     }
 }

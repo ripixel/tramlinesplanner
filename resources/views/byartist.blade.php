@@ -16,13 +16,13 @@
                     </div>
                 </div>
             @endforeach
+
+            <a onclick="populateSelect();" class="pure-button pure-u-1">Go</a>
         </div>
 
-        {!! Form::open(array('url' => 'foo/bar'))  !!}
-        {!! Form::select('selected_artists[]', $select_artists, null, ['id' => 'selected_artists', 'class' => 'form-control', 'multiple', 'style' => 'display: none;']) !!}
+        {!! Form::open(array('url' => '/schedule', 'method' => 'post', 'id' => 'selected_timings_form'))  !!}
+        {!! Form::select('selected_timings[]', $select_timings, $already_selected_timings, ['id' => 'selected_timings', 'class' => 'form-control', 'multiple', 'style' => 'display: none;']) !!}
         {!! Form::close() !!}
-
-        <a onclick="populateSelect();">Go</a>
     </div>
 </div>
 
@@ -30,7 +30,24 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $(".artist-box-grid").on("click", ".artist-name", selectArtist);
+        // select already selected timings if there are any
+        selectAlreadySelectedArtists();
     });
+
+    function selectAlreadySelectedArtists() {
+        $.each($("#selected_timings").val(), function() {
+            var selectedTiming = this;
+            var h3 = $("h3:contains('" + selectedTiming.toString() + "')");
+            $.each(h3, function() {
+                var currentH3 = $(this);
+                if(currentH3.html().toUpperCase()==selectedTiming.toString().toUpperCase()) {
+                    currentH3.parent().addClass("artist-name-selected");
+                }
+            })
+        });
+        var numberSelected = $(".artist-name-selected").length;
+        $(".noOfArtistsSelected").html(numberSelected);
+    }
 
     function selectArtist(event) {
         var artistBox = $(event.currentTarget);
@@ -45,7 +62,8 @@
         selectedArtists.each(function() {
             selectedArtistNames.push($(this).html());
         });
-        $("#selected_artists").val(selectedArtistNames);
+        $("#selected_timings").val(selectedArtistNames);
+        $("#selected_timings_form").trigger("submit");
     }
 
 </script>

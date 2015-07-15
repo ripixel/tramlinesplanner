@@ -18,6 +18,8 @@ class CreateTimingsTable extends Migration
             $table->string('venue_name');
             $table->string('start_time');
             $table->string('end_time');
+            $table->date('date');
+            $table->boolean('has_twin');
 
             $table->foreign('artist_name')
                     ->references('name')

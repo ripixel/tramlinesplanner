@@ -17,6 +17,7 @@ body {
 	background: url('../img/background.webp') no-repeat fixed center center;
 	color: #fff;
 	font-family: 'Arvo', serif;
+	padding-bottom: 20px;
 }
 
 .container {
@@ -109,6 +110,10 @@ body {
 	color: #fff;
 }
 
+.artist-box-grid {
+	font-size: 0.8em;
+}
+
 .artist-box {
 	padding: 20px;
 }
@@ -119,6 +124,59 @@ body {
 	padding: 10px;
 	cursor: pointer;
 }
+
+.schedule-table {
+	overflow-x: scroll;
+	font-size: 0.8em;
+	position: relative;
+}
+
+.artist-cell, .padding-cell {
+	border: 1px solid rgba(255,255,255,0.3);
+}
+
+.timing-row > th {
+	background: rgba(0,0,0,0.5);
+	font-family: 'Arvo', serif;
+	font-weight: normal;
+	min-width: 40px !important;
+	position: relative;
+	left: -21px;
+}
+
+.artist-cell {
+	background: #ed1c24;
+	font-family: 'Arvo', serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+	padding: 5px;
+}
+
+.artist-cell-selected {
+	background: #47B334;
+}
+
+.venue-cell {
+	background: rgba(0,0,0,0.6);
+	font-family: 'Arvo', serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: right;
+	padding: 5px;
+	position: absolute;
+	left: 0;
+	width: 200px;
+}
+
+.venue-cell-move-down {
+	position: relative;
+	top: 13px;
+	z-index: 10;
+}
+
 
 .artist-name-selected {
 	background: #47B334;
