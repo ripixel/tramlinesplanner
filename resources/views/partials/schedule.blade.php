@@ -12,8 +12,8 @@
                 </div>
                 <div class="pure-g">
                     <div class="pure-u-2-3"><p>{{ $timing->venue_name }}</p></div>
-                    <div class="pure-u-1-6"><p>{{ $timing->start_time }}</p></div>
-                    <div class="pure-u-1-6"><p>{{ $timing->end_time }}</p></div>
+                    <div class="pure-u-1-6" style="text-align: right;"><p style="padding-right: 0;">{{ $timing->start_time }} <em>&rarr;</em> </p></div>
+                    <div class="pure-u-1-6" style="text-align: left;"><p style=" padding-left: 6px;">{{ $timing->end_time }}</p></div>
                 </div>
             </div>
         </div>

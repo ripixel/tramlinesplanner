@@ -19,8 +19,9 @@
                 </div>
             @endforeach
 
-            <a onclick="populateSelect();" class="pure-button pure-u-1">Go</a>
         </div>
+
+        <a onclick="populateSelect();" class="pure-u-1 tram-button">See my schedule</a>
 
         {!! Form::open(array('url' => '/schedule', 'method' => 'post', 'id' => 'selected_timings_form'))  !!}
         {!! Form::select('selected_timings[]', $select_timings, $already_selected_timings, ['id' => 'selected_timings', 'class' => 'form-control', 'multiple', 'style' => 'display: none;']) !!}

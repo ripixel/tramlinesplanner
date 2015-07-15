@@ -15,7 +15,7 @@
             </form>
         </h4>
 
-        <a onclick="redirectToCompare();" class="pure-button pure-u-1">Compare</a>
+        <a onclick="redirectToCompare();" class="tram-button pure-u-1">Compare Schedules</a>
 
     </div>
 </div>

@@ -11,6 +11,7 @@ class HomeController extends Controller
 {
     function show()
     {
-        return view('home');
+        $title = "Home";
+        return view('home',compact('title'));
     }
 }

@@ -15,7 +15,7 @@
             @include('partials.schedule')
         @endif
 
-        <a style="margin-top: 20px;" href="{{ action('ScheduleController@compare') }}" class="pure-button pure-u-1">Compare Another</a>
+        <a href="{{ action('ScheduleController@compare') }}" class="tram-button pure-u-1">Compare Another</a>
 
     </div>
 </div>

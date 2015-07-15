@@ -21,8 +21,12 @@ trait AuthenticatesUsers
         if (view()->exists('auth.authenticate')) {
             return view('auth.authenticate');
         }
+        $title = "Login & Register";
+        return view('auth.login',compact('title'));
+    }
 
-        return view('auth.login');
+    public function redirectPath() {
+        return '/schedule';
     }
 
     /**

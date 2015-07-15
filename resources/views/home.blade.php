@@ -10,7 +10,7 @@
             <a href="{{ action('ByArtistController@show') }}" class="pure-u-md-1-3 pure-u-1 select-box-a">
                 <div class="pure-u-1">
                     <div class="select-box">
-                        <h2>By Artist</h2>
+                        <h2>Plan By Artist</h2>
                         <p>Plan your weekend by selecting your favourite artists - we'll figure out your schedule</p>
                     </div>
                 </div>
@@ -19,25 +19,20 @@
             <a href="{{ action('ByTimeController@show') }}" class="pure-u-md-1-3 pure-u-1 select-box-a">
                 <div class="pure-u-1">
                     <div class="select-box">
-                        <h2>By Time</h2>
+                        <h2>Plan By Time</h2>
                         <p>Plan your weekend by seeing the times and selecting who you want to see</p>
                     </div>
                 </div>
             </a>
 
-            <div class="pure-u-md-1-3 pure-u-1">
-                <div class="select-box">
-                    <h2>Already Planned?</h2>
-                    <p>Sign in here to see and change your schedule</p>
-                    <form class="pure-form pure-form-stacked">
-                        <fieldset class="pure-group">
-                            <input type="text" placeholder="Email" class="pure-input-1" />
-                            <input type="password" placeholder="Password" class="pure-input-1" />
-                        </fieldset>
-                        <button class="pure-button pure-input-1">Sign In</button>
-                    </form>
+            <a href="{{ action('ScheduleController@compare') }}" class="pure-u-md-1-3 pure-u-1 select-box-a">
+                <div class="pure-u-1">
+                    <div class="select-box">
+                        <h2>Compare Schedules</h2>
+                        <p>If your friends have been using this, put their share links into this box to see where they're going!</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

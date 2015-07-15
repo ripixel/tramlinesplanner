@@ -11,6 +11,13 @@
 |
 */
 
+/* Auth Routes */
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
+
+/* App Routes */
 Route::get('/compare/{share_str_1}/{share_str_2}', 'ScheduleController@compareShow');
 Route::get('/compare', 'ScheduleController@compare');
 Route::get('/schedule/{share_str}', 'ScheduleController@sharedShow');

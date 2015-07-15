@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Tramlines Planner</title>
+    <title>{{ $title }} | Tramlines Festival Event Planner</title>
     <link href="{{ URL::asset('css/pure-min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ URL::asset('css/grids-responsive-min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ URL::asset('css/tramlinesplanner.css') }}" rel="stylesheet" type="text/css" />

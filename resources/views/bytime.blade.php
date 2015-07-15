@@ -66,9 +66,9 @@
                 @endforeach
                 </tbody>
             </table>
-
-            <a onclick="populateSelect();" style="margin-top: 20px;" class="pure-button pure-u-1">Go</a>
         </div>
+
+        <a onclick="populateSelect();" class="tram-button pure-u-1">See my schedule</a>
 
         {!! Form::open(array('url' => '/schedule', 'method' => 'post', 'id' => 'selected_timings_form'))  !!}
         {!! Form::select('selected_timings[]', $select_timings, $already_selected_timings, ['id' => 'selected_timings', 'class' => 'form-control', 'multiple', 'style' => 'display: none;']) !!}
