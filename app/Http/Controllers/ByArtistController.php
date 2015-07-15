@@ -14,7 +14,7 @@ class ByArtistController extends Controller
 {
     function show() {
 
-        $artists = Artist::orderBy('name','asc')->get();
+        $timings = Timing::orderBy('artist_name','asc')->get();
         $select_timings = Timing::lists('artist_name','artist_name');
 
         //TODO make this run from logged in user
@@ -23,6 +23,6 @@ class ByArtistController extends Controller
         $already_selected_timings = $user->timings->lists('artist_name','artist_name')->toArray();
         // if not then set it to an empty array
 
-        return view('byartist', compact('artists', 'select_timings', 'already_selected_timings'));
+        return view('byartist', compact('timings', 'select_timings', 'already_selected_timings'));
     }
 }

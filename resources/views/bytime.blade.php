@@ -6,7 +6,9 @@
         <h2>Plan your <span class="tram-red">Tramlines</span> schedule by Time</h2>
         <p>Below are all the events that will be appearing at Tramlines 2015 - simply select the ones you would like to see, and we'll create your schedule for you, and even warn you about any clashes.</p>
 
-        <h3>Current Number of Events Selected: <span class="noOfEventsSelected tram-red">0</span></h3>
+        <h3 style="margin-bottom: 0">Current Number of Events Selected: <span class="noOfEventsSelected tram-red">0</span></h3>
+        <p style="margin-top: 0"><em>Click on the name of the artist to select the event</em></p>
+
         <div class="pure-g timing-box-grid">
             <table class="pure-u-1 schedule-table">
                 <thead>

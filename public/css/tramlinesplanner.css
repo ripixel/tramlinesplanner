@@ -13,16 +13,21 @@ a, p {
 	text-decoration: none;
 }
 
+input {
+    color: #000;
+}
+
 body {
-	background: url('../img/background.webp') no-repeat fixed center center;
+	background: url('../img/background.webp') #462e3d no-repeat fixed center center;
 	color: #fff;
 	font-family: 'Arvo', serif;
 	padding-bottom: 20px;
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1240px;
 	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .restrict-width {
@@ -98,6 +103,10 @@ body {
 	color: #ed1c24;
 }
 
+.center-me {
+	text-align: center;
+}
+
 .select-box p {
 	color: #000;
 }
@@ -123,6 +132,26 @@ body {
 	display: block;
 	padding: 10px;
 	cursor: pointer;
+}
+
+.day-heading {
+	font-family: 'Arvo', serif !important;
+	padding: 10px;
+	background: #ed1c24;
+	text-transform: uppercase;
+}
+
+.schedule-artist-grid .artist-box {
+	padding: 5px;
+}
+
+.artist-schedule-box {
+	background: rgba(0,0,0,0.3);
+}
+
+.artist-schedule-box p {
+	padding: 10px;
+	margin: 0;
 }
 
 .schedule-table {
@@ -169,6 +198,7 @@ body {
 	position: absolute;
 	left: 0;
 	width: 200px;
+	border: 1px solid #000;
 }
 
 .venue-cell-move-down {

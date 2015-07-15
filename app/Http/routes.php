@@ -10,6 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
+Route::get('/compare/{share_str_1}/{share_str_2}', 'ScheduleController@compareShow');
+Route::get('/compare', 'ScheduleController@compare');
+Route::get('/schedule/{share_str}', 'ScheduleController@sharedShow');
 Route::get('/schedule', 'ScheduleController@show');
 Route::post('/schedule', 'ScheduleController@store');
 Route::get('/plan/artist', 'ByArtistController@show');
