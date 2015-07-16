@@ -39,11 +39,11 @@
 
     function selectAlreadySelectedArtists() {
         $.each($("#selected_timings").val(), function() {
-            var selectedTiming = this;
+            var selectedTiming = this.toString();
             var h3 = $("h3:contains('" + selectedTiming.toString() + "')");
             $.each(h3, function() {
                 var currentH3 = $(this);
-                if(currentH3.html().toUpperCase()==selectedTiming.toString().toUpperCase()) {
+                if(currentH3.html().replace('&amp;','&').toUpperCase()==selectedTiming.toString().toUpperCase()) {
                     currentH3.parent().addClass("artist-name-selected");
                 }
             })
@@ -63,7 +63,7 @@
         var selectedArtists = $(".artist-name-selected > h3");
         var selectedArtistNames = [];
         selectedArtists.each(function() {
-            selectedArtistNames.push($(this).html());
+            selectedArtistNames.push($(this).html().replace('&amp;','&'));
         });
         $("#selected_timings").val(selectedArtistNames);
         $("#selected_timings_form").trigger("submit");

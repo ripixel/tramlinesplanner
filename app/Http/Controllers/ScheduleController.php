@@ -89,7 +89,7 @@ class ScheduleController extends Controller
         $user = User::where(DB::raw('BINARY `share_str`'),'=',$share_str)->first();
         if($user !== null) {
             $timings = $user->timings()->orderBy('id', 'asc')->get();
-            $title = $user->name . "'s Schedule'";
+            $title = $user->name . "'s Schedule";
             return view('shareschedule', compact('timings', 'user','title'));
         } else {
             return redirect('/');

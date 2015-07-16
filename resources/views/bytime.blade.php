@@ -94,10 +94,10 @@
     function selectAlreadySelectedArtists() {
         $.each($("#selected_timings").val(), function() {
             var selectedTiming = this;
-            var artistCells = $(".artist-cell:contains('" + selectedTiming.toString() + "')");
+            var artistCells = $(".artist-cell:contains('" + selectedTiming.toString().replace('&amp;','&') + "')");
             $.each(artistCells, function() {
                 var currentArtistCell = $(this);
-                if(currentArtistCell.html().toUpperCase()==selectedTiming.toString().toUpperCase()) {
+                if(currentArtistCell.html().replace('&amp;','&').toUpperCase()==selectedTiming.toString().toUpperCase()) {
                     currentArtistCell.addClass("artist-cell-selected");
                 }
             })
@@ -117,7 +117,7 @@
         var selectedArtists = $(".artist-cell-selected");
         var selectedArtistNames = [];
         selectedArtists.each(function() {
-            selectedArtistNames.push($(this).html());
+            selectedArtistNames.push($(this).html().replace('&amp;','&'));
         });
         $("#selected_timings").val(selectedArtistNames);
         $("#selected_timings_form").trigger("submit");
