@@ -74,7 +74,7 @@ class ScheduleController extends Controller
             $all_timings = Timing::lists('artist_name')->toArray();
             $shared_timings = array_intersect($all_timings, $user_1_timings, $user_2_timings);
 
-            $timings = $timings = Timing::whereIn('artist_name', $shared_timings)->get();
+            $timings = $timings = Timing::whereIn('artist_name', $shared_timings)->orderBy('id', 'asc')->get();
             $title = "Compare Schedules for " . $user_1->name . " and " . $user_2->name;
 
             return view('compareschedule', compact('user_1', 'user_2', 'timings','title'));
